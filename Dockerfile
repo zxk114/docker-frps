@@ -13,12 +13,16 @@ ENV TERM xterm
 ADD aliyun-mirror.repo /etc/yum.repos.d/CentOS-Base.repo
 ADD aliyun-epel.repo /etc/yum.repos.d/epel.repo
 
-RUN yum install -y curl wget tar bzip2 unzip 
+RUN yum install -y curl wget tar bzip2 unzip screen
 
+ADD start.sh /root/start.sh
 ADD frps /root/frps
 ADD frps.ini /root/frps.ini
 
 RUN cd /root
 RUN chmod +x frps
+RUN chmod +x start.sh
 
 EXPOSE 80 6000 7000 7500 8000
+
+ENTRYPOINT ["/root/start.sh"]

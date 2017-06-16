@@ -1,11 +1,11 @@
 #
-# MAINTAINER        xk.zhang <workbench@aliyun.com>
-# DOCKER-VERSION    1.12.6
+# MAINTAINER      xk.zhang <workbench@aliyun.com>
+# DOCKER-VERSION  1.12.6
 #
-# Dockerizing CentOS7: Dockerfile for building CentOS images
+# Dockerizing     CentOS7: Dockerfile for building CentOS images
 #
-FROM       centos:centos7.3.1611
-MAINTAINER xk.zhang <workbench@aliyun.com>
+FROM        centos:centos7.1.1503
+MAINTAINER  xk.zhang <workbench@aliyun.com>
 
 ENV TZ "Asia/Shanghai"
 ENV TERM xterm
